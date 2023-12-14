@@ -6,15 +6,15 @@
 }
 
 header {
-    padding: 16px 0;
+    padding: 1em 0;
     background-color:#181818;
     color: #ecf0f1
 }
 
 header nav li {
     display: inline;
-    margin-left: 16px;
-    font-size: 18px;
+    margin-left: 1em;
+    font-size: 1.12em;
 }
 
 header nav li a {
@@ -35,19 +35,19 @@ section .container {
     justify-content: space-between;
 }
 
-
+body {
+    background-color: rgb(255, 255, 255);
+}
 .sobre img {
-    width: 350px;
-    margin-top: 32px;
+    width: 21.9em;
+    margin-top: 2em;
 }
 .sobre {
     display: flex;
 }
 .coluna-body {
-    flex: 1 0 200px;
     margin: 20px;
     padding: 20px;
-    border-radius: 5px;
 }
 .sobre h2 {
     margin-bottom: 32px;
@@ -66,17 +66,162 @@ section .container {
     width: 100%;
 }
 
-.produtos li {
-    list-style: none;
-}
-.produtos {
+.coluna {
     display: grid;
     grid-template-columns: repeat(4, 24%);
     column-gap: 1%;
     row-gap: 5%;
 }
 
+.coluna li {
+    list-style: none;
+}
+.coluna li p {
+    margin-top: 1em;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
 
+.coluna li button {
+    width: 100%;
+    height: 28px;
+    background-color: rgb(1, 160, 41);
+    color: #ecf0f1;
+    border: none;
+    font-style: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
 
+@media screen and (max-width: 640px) {
+    .coluna {
+        display: block;
+    }
+    .container {
+        max-width: 90%;
+    }
+    header{
+        padding-left: 1em;
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+    .sobre img {
+        width: 95%;
+        margin-right: 0;
+    }
+    .sobre {
+        display: block;
+    }
+    .coluna-body h2 {
+        border-bottom: 2px solid #000;
+    }
+    .coluna-body {
+        margin: 18px 0 0;
+        padding: 0;
+        border-radius: 5px;
+    }
+    .coluna li h3 {
+        font-size: 1.6em;
+        margin-top: 0.6em;
+    }
+    .coluna li p {
+        font-size: 1em;
+        margin-top: 0.6em;
+        font-style: bold;
+    }
+    
+    .coluna li button {
+        width: 100%;
+        height: 35px;
+        background-color: rgb(1, 160, 41);
+        color: #ecf0f1;
+        border: none;
+        font-style: bold;
+        font-size: 1em;
+        border-radius: 5px;
+        margin-bottom: 1em;
+    }
+}
 
+@media screen and (min-width: 641px ) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+    .coluna {
+        display: block;
+    }
+    header{
+        padding-left: 1em;
+        padding-bottom: 2.5em;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header h1 , 
+    .menu {
+        padding-top: 32px;
+        font-style: bold;
+    }
+    .menu{
+        font-size: 1.3em;
+    }
+    .sobre img {
+        margin-top: 3em;
+        width: 100%
+    }
+    .sobre {
+        display: block;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .coluna-body h2 {
+        border-bottom: 2px solid #000;
+    }
+    .coluna-body {
+        margin: 18px 0 0;
+        padding: 0;
+        border-radius: 5px;
+    }
+    .main-produtos h2 {
+        font-size: 36px;
+    }
+    .produtos img {
+        margin-top: 2em;
+        width: 100%;
+    }
+    
+    .coluna {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        column-gap: 1%;
+        row-gap: 5%;
+    }
+    
+    .coluna li {
+        list-style: none;
+    }
+    .coluna li h3 {
+        font-size: 2em;
+        margin-top: 0.6em;
+    }
+    .coluna li p {
+        margin-top: 1em;
+        font-size: 1.3em;
+    }
+    
+    .coluna li button {
+        margin-top: 1em;
+        width: 100%;
+        height: 1.9em;
+        background-color: rgb(1, 160, 41);
+        color: #ecf0f1;
+        border: none;
+        font-style: bold;
+        font-size: 1.5em;
+        border-radius: 5px;
+        margin-bottom: 1em;
+    }
+    
 
+}
